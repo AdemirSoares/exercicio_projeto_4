@@ -10,12 +10,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <section class="hero">
-        <div class="hero__content">
-            <h1 class="hero__content__branding">
-                <img src="./dist/imagens/scale.webp" alt="Disney O Rei Leão">
+    <header class="header">
+        <div class="header__container">
+            <h1>
+                <img class="header__logo" src="./dist/imagens/disney-original.png" alt="Disney">
             </h1>
-            <button><a href="#trailer">Ver trailer</a></button>
+            <div class="header__lista">
+                <ul class="header__links">
+                    <li class="header__links__item button">
+                        <a href="#detalhes">Detalhes</a>
+                    </li>
+                </ul>
+                <ul class="header__links">
+                    <li class="header__links__item button">
+                        <a href="#trailer">Trailer</a>
+                    </li>
+                    <li class="header__links__item button button--dark">
+                        <a href="#home">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section id="home" class="hero">
+        <div class="hero__content">
+            <div class="hero__content__branding">
+                <img src="./dist/imagens/scale.webp" alt="Disney O Rei Leão">
+            </div>
+            <a href="#trailer" class="button button--secondary">Ver trailer</a>
             <div class="hero__content__pictures">
                 <img class="hero__content__pictures__10" src="./dist/imagens/scale-1.webp" alt="10">
                 <img class="hero__content__pictures__AD" src="./dist/imagens/scale-2.webp" alt="AD">
@@ -26,8 +48,8 @@
             </div>
             <span class="text">Drama, Chegada à maioridade, Ação e aventura, Musical</span>
             <div class="hero__content__button">
-                <button><a href="#" target="_blank">Alugar</a></button>
-                <button><a href="#" target="_blank">Comprar</a></button>
+                <button class="button">Alugar</button>
+                <button class="button">Comprar</button>
             </div>
             <h3 class="title--small">
                 O Rei Leão (The Lion King), da Disney, realizado por Jon Favreau, viaja até à savana africana, onde um 
@@ -37,7 +59,7 @@
             </h3>
         </div>
     </section>
-    <section>
+    <section id="detalhes">
         <h2 class="title h2">DETALHES</h2>
         <div class="detalhes">
             <div class="detalhes__bio">
@@ -55,7 +77,7 @@
                 </p>
             </div>
             <div class="detalhes__info">
-                <ul>
+                <ul class="detalhes__info__dura">
                     <li class="text">Duração:</li>
                     <li class="text cor-branco"><b>2h7min</b></li>
                     <li class="text ">Data de lançamento:</li>
@@ -66,7 +88,7 @@
                     <img src="./dist/imagens/scale-1.webp" alt="">
                     <li class="text cor-branco"><b>violência</b></li>
                 </ul>
-                <ul>
+                <ul class="detalhes__info__raliza">
                     <li class="text">Realização:</li>
                     <li class="text cor-branco"><b>Jon Fareau</b></li>
                     <li class="text">Elenco:</li>
@@ -84,5 +106,44 @@
         <h2 class="title--big">Trailer Oficial - O rei Leão</h2>
         <video src="./videos/trailer-oficial.mp4" controls></video>
     </section>
+    <footer class="footer">
+        <div class="footer__container">
+            <img class="footer__logo" src="./dist/imagens/disney-original.png" alt="Disney">
+            <ul class="footer__links">
+                <li class="footer__links__item">
+                    <a href="#" class="text--small">Termos e Condições de Uso</a>
+                </li>
+                <li class="footer__links__item">
+                    <a href="#" class="text--small">Política de privacidade</a>
+                </li>
+                <li class="footer__links__item">
+                    <a href="#" class="text--small">Proteção de Dados no Brasil</a>
+                </li>
+                <li class="footer__links__item">
+                    <a href="#" class="text--small">Anúncios personalizados</a>
+                </li>
+                <li class="footer__links__item">
+                    <a href="#" class="text--small">Dispositivos compatíveis</a>
+                </li>
+                <li class="footer__links__item">
+                    <a href="#" class="text--small">Ajuda</a>
+                </li>
+                <li class="footer__links__item">
+                    <a href="#" class="text--small">Sobre o Disney+</a>
+                </li>
+            </ul>
+            <p class="text--small">
+                © 2024 Disney e suas empresas afiliadas. Todos os direitos reservados. A programação do conteúdo esportivo 
+                varia de acordo com o plano. Para usar o Disney+, é necessário ser assinante e ter mais de 18 anos de idade. 
+                Conteúdo sujeito a disponibilidade.
+            </p>
+            <p class="text--small">
+                O serviço Disney+ é comercializado por The Walt Disney Company (Brasil) Ltda., World Trade Center, Av. Das 
+                Nações Unidas, 12.551, 12.555, 12.559, Piso 10, São Paulo/SP - CEP 04578-903, Brasil e 
+                CNPJ/M 73.042.962/0004-20
+            </p>
+        </div>
+    </footer>
+    <script src="./src/scripts/main.js"></script>
 </body>
 </html>

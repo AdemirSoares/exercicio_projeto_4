@@ -1,0 +1,33 @@
+@use 'variaveis';
+
+.footer {
+    &__container {
+        padding: 4vw 12vw;
+        text-align: center;
+    }
+
+    &__logo {
+        width: 100px;
+        margin: 0 auto 50px;
+        margin-top: 50px;
+    }
+
+    &__links {
+        margin-bottom: 16px;
+
+        &__item {
+            display: inline-block;
+
+            a {
+                text-decoration: none;
+                padding: 8px 16px;
+                display: block;
+                color: variaveis.$corDeFundoBotaoSecundario;
+            }
+        }
+    }
+
+    p {
+        margin-bottom: 16px;
+    }
+}

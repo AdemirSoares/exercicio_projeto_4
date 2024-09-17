@@ -1,31 +1,31 @@
 @use 'hero';
 @use 'detalhes';
 @use 'trailer';
+@use 'footer';
+@use 'header';
+@use 'variaveis';
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
+    list-style: none;
 }
 
-$corDeFundo: #000;
-$corTextoPrincipal: silver;
-$corTextoSecundario: #c0c0c0;
-
 body {
-    background-color: $corDeFundo;
+    background-color: variaveis.$corDeFundo;
 }
 
 @mixin text($fontSize: 16px) {
     font-size: $fontSize;
     line-height: $fontSize + 10px;
-    color: $corTextoPrincipal;
+    color: variaveis.$corTextoPrincipal;
 }
 
 @mixin title($fontSize: 28px) {
     @include text($fontSize);
-    color: $corTextoSecundario;
+    color: variaveis.$corTextoSecundario;
     font-weight: normal
 }
 
@@ -38,17 +38,107 @@ body {
 }
 
 .text--small {
-    @include text(12px);
+    @include text(14px);
 }
 
 .title--big {
     @include title(44px);
+
+    @media (max-width: 768px) {
+        font-size: 28px;
+    }
 }
 
 .title {
     @include title;
+
+    @media (max-width: 768px) {
+        font-size: 22px;
+    }
 }
 
 .title--small {
     @include title(22px);
+
+    @media (max-width: 768px) {
+        font-size: 18px;
+    }
+}
+
+.button {
+    background-color: variaveis.$corDeFundoBotaoPrimario;
+    color: variaveis.$corDeFundo;
+    font-size: 18px;
+    font-weight: bold;
+    height: 50px;
+    width: 200px;;
+    padding: 8px;
+    border: 1px solid;
+    border-radius: 8px;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+
+    @media (max-width: 768px) {
+        font-size: 14px;
+        font-weight: bold;
+        height: 50px;
+        width: 165px;;
+        padding: 8px;
+    }
+
+    a {
+        color: variaveis.$corDeFundo;
+    }
+    
+
+    &:hover {
+        background-color: lighten(variaveis.$corDeFundoBotaoPrimario, 5%);
+    }
+
+    &--secondary {
+        background-color: variaveis.$corDeFundoBotaoSecundario;
+        border-color: variaveis.$corDeFundoBotaoSecundario;
+        color: variaveis.$corDeFundo;
+        margin-bottom: 40px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+
+        @media (max-width: 768px) {
+            font-size: 14px;
+            font-weight: bold;
+            height: 50px;
+            width: 165px;;
+            padding: 8px;
+        }
+
+        &:hover {
+            background-color: rgba(variaveis.$corDeFundoBotaoDark, 0.8);
+            border-color: variaveis.$corTextoPrincipal;
+            color: variaveis.$corTextoPrincipal;
+            text-decoration: none;
+            font-size: 18px;
+            
+        }
+    }
+
+    &--dark {
+        background-color: rgba(variaveis.$corDeFundoBotaoDark, 0.8);
+        border-color: variaveis.$corTextoPrincipal;
+        color: variaveis.$corTextoPrincipal;
+
+        a {
+            color: variaveis.$corTextoPrincipal;
+        }
+
+        &:hover {
+            background-color: variaveis.$corDeFundoBotaoSecundario;
+            border-color: variaveis.$corDeFundoBotaoSecundario;
+            
+            a {
+                color: variaveis.$corDeFundo;
+            }
+        }
+    }
 }

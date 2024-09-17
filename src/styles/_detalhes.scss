@@ -1,23 +1,38 @@
+@use 'variaveis';
+
 .h2 {
     border-bottom: 2px solid;
+    padding-top: 130px;
     padding-bottom: 20px;
     margin-left: 100px;
     margin-right: 100px;
-    margin-top: 50px;
+    
+    @media (max-width: 768px) {
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-left: 20px;
+    }
 }
 
 .detalhes {
     display: flex;
-    max-width: 1024px;
-    margin-top: 30px;
-    margin-left: 100px;
-    gap: 50px;
+    padding: 5.6vw;
+    margin: 0 auto;
+    gap: 100px;
+
+    @media (max-width: 768px) {
+        display: block;
+    }
 
     &__bio {
-        justify-content: space-between;
+        max-width: 50%;
+
+        @media (max-width: 768px) {
+            max-width: 100%;
+        }
         
         .cor-branco {
-            color: #fff;
+            color: variaveis.$corDeFundoBotaoSecundario;
         }
 
         h3 {
@@ -31,8 +46,14 @@
 
     &__info {
         display: flex;
-        max-width: 100px;
-        gap: 100px;
+        max-width: 1024px;
+        max-width: 100%;
+        margin-top: 110px;
+        gap: 50px;
+
+        @media (max-width: 768px) {
+            margin-top: 50px;
+        }
 
         ul {
 
@@ -45,7 +66,7 @@
     ul {
 
         .cor-branco {
-            color: #fff;
+            color: variaveis.$corDeFundoBotaoSecundario;
         }
 
         li {

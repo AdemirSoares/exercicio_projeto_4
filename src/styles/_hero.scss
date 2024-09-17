@@ -1,7 +1,19 @@
+@use 'variaveis';
+
 .hero {
     padding: 5.6vw;
     min-height: 126vh;
     background-image: url(../imagens/simba.jpeg);
+
+    @media (max-width: 768px) {
+        background-image: url(../imagens/simba-celular.jpeg);
+        padding-top: 30px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 100%;
+    }
+
+    }
 
     h3 {
         margin-top: 40px;
@@ -10,27 +22,16 @@
     &__content {
         max-width: 900px;
 
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
         &__branding {
 
             img {
                 width: 50%;
-            }
-        }
-
-        button {
-            background-color: #fff;
-            margin-bottom: 40px;
-            height: 50px;
-            width: 200px;;
-            padding: 8px;
-            border-radius: 8px;
-            text-transform: uppercase;
-
-            a {
-                text-decoration: none;
-                font-size: 18px;
-                color: #02172a;
-                font-weight: bold;
             }
         }
 
@@ -60,26 +61,14 @@
             display: flex;
             margin-top: 50px;
             gap: 10px;
-            
-            button {
-                background-color: #02d6e8;
-                height: 50px;
-                width: 200px;;
-                padding: 8px;
-                border-radius: 8px;
-                text-transform: uppercase;
-
-                a {
-                    text-decoration: none;
-                    font-size: 18px;
-                    color: #02172a;
-                    font-weight: bold;
-                }
-            }
         }
 
         h3 {
             margin-top: 20px;
+
+            @media (max-width: 768px) {
+                font-size: 18px;
+            }
         }
     }
 }
