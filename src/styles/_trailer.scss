@@ -8,6 +8,7 @@
     text-align: center;
 
     @media (max-width: 768px) {
+        z-index: 5;
         width: 90%;
     }
 

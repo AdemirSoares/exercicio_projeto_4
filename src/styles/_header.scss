@@ -6,10 +6,6 @@
     left: 0;
     background-color: variaveis.$corDeFundo;
 
-    @media (max-width: 768px) {
-        width: 50%;
-    }
-
     &--is-hidden {
         background-color: transparent;
 
@@ -42,6 +38,12 @@
         display: flex;
         text-align: center;
         gap: 20px;
+
+        @media (max-width: 768px) { 
+            flex-direction: column;
+            width: 50%;
+            gap: 10px;
+        }
 
         &__item {
             display: flex;

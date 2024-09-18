@@ -5,6 +5,15 @@
     min-height: 126vh;
     background-image: url(../imagens/simba.jpeg);
 
+    @media (max-width: 1180px) {
+        background-image: url(../imagens/simba-tablet.jpeg);
+        padding-top: 30px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 100%;
+        min-height: 0;
+    }
+
     @media (max-width: 768px) {
         background-image: url(../imagens/simba-celular.jpeg);
         padding-top: 30px;
@@ -13,10 +22,13 @@
         width: 100%;
     }
 
-    }
-
     h3 {
         margin-top: 40px;
+
+        @media (max-width: 1180px) {
+            padding-top: 100px;
+            padding-bottom: 0;
+        }
     }
 
     &__content {
@@ -40,7 +52,6 @@
             align-items: center;
             gap: 10px;
             
-
             &__10 {
                 height: 28px;
                 width: 28px;
